@@ -1,0 +1,198 @@
+/* add into css file */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600;800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --nav-bg-color: #ff5c04;
+    --bg-color: #222327;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+
+
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: transparent; */
+    background: var(--nav-bg-color);
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: var(--main-color);
+    font-size: 28px;
+}
+
+.logo span {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+    /* gap: 50px; */
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0px;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.login,
+.register {
+    display: flex;
+    align-items: center;
+}
+
+.login i {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.register i {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 7px;
+}
+
+.main a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+
+
+/* MEDIA QUERY max-width:1280px */
+@media (max-width:1280px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+
+/* MEDIA QUERY max-width:990px */
+@media (max-width:990px) {
+    .main {
+        margin-left: auto;
+    }
+
+    #menu-icon {
+        display: block;
+
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -1000%;
+        width: 250px;
+        height: 100vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 0px;
+        transition: .50s ease;
+    }
+
+    .navbar a {
+
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover
+    {
+        color:var(--text-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open
+    {
+        right: 0;
+    }
+
+}
+
+
+/* MEDIA QUERY max-width:480px */
+@media (max-width:480px) {
+    .main {
+        /* display: none; */
+    }
+}
