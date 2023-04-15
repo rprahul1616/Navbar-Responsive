@@ -191,6 +191,7 @@ header {
 
 
 /* MEDIA QUERY max-width:480px */
+
 @media (max-width:480px) {
     .main {
         /* display: none; */
